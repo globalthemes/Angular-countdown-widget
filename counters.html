@@ -1,0 +1,63 @@
+<style>
+	.countdown {
+	margin:auto;
+	max-width:570px;
+	color:{{color()}};
+}
+.countdown-header {
+	font-size:18px;
+	font-weight:900;
+	margin:0px;
+	padding-left:10px;
+}
+.countdown-container {
+	float:left;
+}
+.countdown-box {
+	float:left;
+	margin:20px 10px 20px 10px;
+	padding:10px;
+	text-align:center;
+	width:100px;
+	background-color:{{background()}};
+	border:1px solid {{color()}};
+}
+.countdown-box .countdown-value {
+	font-size:32px;
+	font-weight:900;
+	padding-top:10%;
+	margin: 0px;
+}
+.countdown-box .countdown-text {
+	font-size:18px;
+	margin: 0px;
+	padding:10px 0px 10px 0px;
+}
+@media screen and (max-width: 590px) {
+	.countdown {
+		max-width: 290px;
+}
+</style>
+<div class="countdown">
+	<p class="countdown-header">Days to: {{deadline()}} {{finished()}}</p>
+	<div class="countdown-container">
+		<div class="countdown-box">
+			<p class="countdown-value days">{{days()}}</p>
+			<p class="countdown-text">Days</p>
+		</div>
+		<div class="countdown-box">
+			<p class="countdown-value hours">{{hours()}}</p>
+			<p class="countdown-text">Hours</p>
+		</div>
+	</div>
+	<div class="countdown-container">
+		<div class="countdown-box">
+			<p class="countdown-value minutes">{{minutes()}}</p>
+			<p class="countdown-text">Minutes</p>
+		</div>
+		<div class="countdown-box">
+			<p class="countdown-value seconds">{{seconds()}}</p>
+			<p class="countdown-text">Seconds</p>
+		</div>
+	</div>
+</div>
