@@ -2,7 +2,6 @@
 	.countdown {
 	margin:auto;
 	max-width:570px;
-	color:{{color()}};
 }
 .countdown-header {
 	font-size:18px;
@@ -19,8 +18,8 @@
 	padding:10px;
 	text-align:center;
 	width:100px;
-	background-color:{{background()}};
-	border:1px solid {{color()}};
+	border:1px solid ;
+	border-radius:5px;
 }
 .countdown-box .countdown-value {
 	font-size:32px;
@@ -38,24 +37,24 @@
 		max-width: 290px;
 }
 </style>
-<div class="countdown">
+<div class="countdown" style="color:{{color()}};">
 	<p class="countdown-header">Days to: {{deadline()}} {{finished()}}</p>
 	<div class="countdown-container">
-		<div class="countdown-box">
+		<div class="countdown-box" style="background-color:{{background()}};border-color: {{color()}};">
 			<p class="countdown-value days">{{days()}}</p>
 			<p class="countdown-text">Days</p>
 		</div>
-		<div class="countdown-box">
+		<div class="countdown-box" style="background-color:{{background()}};border-color: {{color()}};">
 			<p class="countdown-value hours">{{hours()}}</p>
 			<p class="countdown-text">Hours</p>
 		</div>
 	</div>
 	<div class="countdown-container">
-		<div class="countdown-box">
+		<div class="countdown-box" style="background-color:{{background()}};border-color: {{color()}};">
 			<p class="countdown-value minutes">{{minutes()}}</p>
 			<p class="countdown-text">Minutes</p>
 		</div>
-		<div class="countdown-box">
+		<div class="countdown-box" style="background-color:{{background()}};border-color: {{color()}};">
 			<p class="countdown-value seconds">{{seconds()}}</p>
 			<p class="countdown-text">Seconds</p>
 		</div>

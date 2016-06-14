@@ -1,6 +1,5 @@
 var counter = angular.module('nessCounter', []);
 
-
 counter.directive('counter', function(){
   return {
 	restrict: 'E',
@@ -9,8 +8,7 @@ counter.directive('counter', function(){
   }
 });
 
-
-counter.controller('nessCounterController', function($scope, $attrs, $interval) {
+counter.controller('nessCounter', function($scope, $attrs, $interval) {
 	
 	$scope.endtime = $attrs.deadline;
 	$scope.bg = $attrs.background;
